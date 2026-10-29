@@ -22,7 +22,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.0.0/).
 
 ---
 
-## [v5.3] — Herramienta de Referencia
+## — Herramienta de Referencia
 
 ### Añadido
 - Rotación, flip, multi/lineal, candado.
@@ -34,7 +34,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.0.0/).
 
 ---
 
-## [v8.2] — Galería de Páginas
+## — Galería de Páginas
 
 ### Añadido
 - Feedback táctil y tarjetas con sombra/presión.
