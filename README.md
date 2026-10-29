@@ -1,76 +1,70 @@
-![Plataforma](https://img.shields.io/badge/Android-7.0%2B-3ddc84?logo=android&logoColor=white)
-![Versión](https://img.shields.io/badge/versión-1.1--beta-a78bfa)
-![Licencia](https://img.shields.io/badge/licencia-privada-lightgrey)
-![Hecho con](https://img.shields.io/badge/hecho%20con-HTML%20%2B%20JS%20%2B%20Canvas-3b82f6)
+# 🖋️ Inkvill — Beta
 
-# Inkvill
+> **Suite Creativa** para dibujo, esquemas y notas. Tres pilares, un solo lienzo.
 
-> Cuadernos, cómics y animación frame-by-frame en tu Android.
->
-> ![Inkvill en acción](docs/screenshots/01-hero.png)
->## ¿Qué es Inkvill?
+Inkvill evoluciona de una app de dibujo a una **suite creativa integral** con tres pilares accesibles desde la pantalla principal:
 
-Inkvill es una app de dibujo para Android pensada para **cuadernos, cómics
-y animación**. Cada libro tiene páginas con capas independientes, pinceles
-personalizables, formas guía, texto y animación frame-by-frame con onion
-skin.
+| Pilar | Icono | Módulo | Descripción |
+|-------|-------|--------|-------------|
+| **Esquemas** | `[Hoja]` | `scenes-writer.js` | Pre-producción: fichas de personajes, escenarios y plantillas de storyboard. |
+| **Libros** | `[+]` | `app.js` | Estudio de dibujo, referencias, animación y storyboards. |
+| **Notas** | `[Lápiz]` | `writer-notes.js` | Moodboards, ideas, texto y URLs. |
 
-Todo funciona **offline**. Tus dibujos se quedan en el teléfono.
+---
 
-- 🎨 **Dibujo con capas**: alpha lock, clipping mask, 16 modos de mezcla.
-- 🖌️ **Pinceles**: grafito, tinta, acuarela, aerógrafo. Perfect-Freehand para trazos fluidos.
-- 🎞️ **Animación**: fotogramas con duración variable, onion skin, ping-pong.
-- ⏱️ **Timelapse automático** del proceso, exportable a vídeo.
-- 📤 **Exporta** a PDF, PNG, ZIP, .grafix, GIF y vídeo.
-- 🎭 **7 temas** de color, incluido modo E-Ink.
-- 💾 **Backup** local (ZIP) y sincronización opcional con Google Drive.
-- ## Capturas
+## ✨ Características principales
 
-| Canvas | Capas | Pinceles |
-|---|---|---|
-| ![Canvas](docs/screenshots/02-canvas.png) | ![Capas](docs/screenshots/03-layers.png) | ![Pinceles](docs/screenshots/04-brushes.png) |
+- 🎨 **Estudio de dibujo** con canvas, capas y páginas.
+- 🖼️ **Herramienta de referencia .**: rotación, flip, multi/lineal, candado, snap a bordes, modo fantasma, modo inmersivo, menú long-press.
+- 🗂️ **Galería de páginas .**: feedback táctil, tarjetas con sombra, selección por lado, lightbox, export animática.
+- 📝 **Notas independientes**: interfaz unificada con búsqueda, autoguardado y `+` central.
+- 🗒️ **Esquemas**: tarjetas para Personajes, Escenarios y Plantillas de Storyboard.
 
-| Animación | Exportar | Temas |
-|---|---|---|
-| ![Animación](docs/screenshots/05-animation.png) | ![Exportar](docs/screenshots/06-export.png) | ![Temas](docs/screenshots/07-themes.png) |
+---
 
-## En movimiento
+## 📸 Capturas
 
-[![Inkvill — demo](docs/screenshots/hero-video-thumb.png)](https://youtu.be/TU_VIDEO_ID)
+| Home | Estudio | Referencia |
+|------|---------|------------|
+| ![Home](docs/screenshots/01-home-carousel.png) | ![Estudio](docs/screenshots/02-book-studio.png) | ![Referencia](docs/screenshots/03-reference-tool.png) |
 
-Dibujo, capas y exportación en 30 segundos.
+| Galería | Esquemas | Notas |
+|---------|----------|-------|
+| ![Galería](docs/screenshots/04-page-gallery.png) | ![Esquemas](docs/screenshots/05-scenes-schemas.png) | ![Notas](docs/screenshots/06-notes.png) |
 
-## Stack técnico
+---
 
-- **Frontend**: HTML + CSS + JavaScript vanilla (sin frameworks).
-- **Empaquetado**: Capacitor 5 → Android WebView.
-- **Persistencia**: IndexedDB para páginas/capas/timelapses, localStorage para ajustes.
-- **Canvas**: motor de capas propio + Perfect-Freehand para el trazo.
-- **Librerías**: page-flip, JSZip, jsPDF, html2canvas, gif.js, Kaitai Struct.
-- **Fuente**: Inter (RIL OFL).
+## 🚧 Estado del proyecto
 
-- ## Estado
+**Versión:** `0.1.0-beta`
+**Estado:** Beta privada — arquitectura de 3 pilares completa.
 
-**v1.1 · Beta**. Cerrando bugs de landscape, mejorando performance en gama baja.
+### ✅ Completado
+- Herramienta de referencia 
+- Galería de páginas 
+- Pantallas de Esquemas y Notas con UI unificada
+- Animaciones de entrada/salida (`translateY`)
+- Integración `popstate` Android
+- Home Booster y sidebar de Ajustes animado
 
-Roadmap abierto en [Issues](../../issues).
+### 🔧 En progreso / Próximo
+- Creación real de Esquemas (Personajes, Escenarios) con formularios y `localStorage`.
+- Editor de notas ampliado (negrita/cursiva, imágenes, URLs).
+- Refinar Snap del carrusel (`proximity` → `mandatory`).
+- Pulir modal de Exportación PDF.
+- Revisar Page Manager (drag & drop con previews).
 
-Limitaciones conocidas:
-- 1 animación por spread.
-- Sin grupos de capas ni texto en curva.
-- Sin export PSD.
-- Importadores de pinceles (.abr, .png, .brushset) temporalmente desactivados.
+Ver [`docs/ROADMAP.md`](docs/ROADMAP.md) para el detalle.
 
-- ## Agradecimientos
+---
 
-Construido sobre hombros de gigantes:
+## 🛠️ Stack
 
-- **[Capacitor](https://capacitorjs.com/)** — puente entre web y Android.
-- **[Perfect-Freehand](https://github.com/steveruizok/perfect-freehand)** — trazo fluido con presión.
-- **[page-flip](https://github.com/Nodlik/StPageFlip)** — efecto curl del libro.
-- **[JSZip](https://stuk.github.io/jszip/)** · **[jsPDF](https://github.com/parallax/jsPDF)** · **[html2canvas](https://html2canvas.hertzen.com/)** · **[gif.js](https://jnordberg.github.io/gif.js/)** — exportación.
-- **[Kaitai Struct](https://kaitai.io/)** — parsing de archivos .abr.
-- **[Inter](https://rsms.me/inter/)** (Rasmus Andersson, SIL OFL) — tipografía.
+- **HTML5 / CSS3 / JavaScript (vanilla)**
+- **Canvas API**
+- **localStorage** para persistencia
+- Sin dependencias externas en runtime
 
-- 
-> 
+---
+
+## 📁 Estructura
